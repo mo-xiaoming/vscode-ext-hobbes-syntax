@@ -1,0 +1,45 @@
+{
+  "name": "hobbes",
+  "repository": "github:mo-xiaoming/vscode-ext-hobbes-syntax",
+  "displayName": "Hobbes",
+  "author": {
+    "name": "Mo Xiaoming"
+  },
+  "description": "Syntax highlighting for hobbes",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "keywords": [
+    "hobbes",
+    "vscode",
+    "language",
+    "highlight",
+    "syntax"
+  ],
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "hobbes",
+        "aliases": [
+          "Hobbes",
+          "hobbes"
+        ],
+        "extensions": [
+          ".hob"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hobbes",
+        "scopeName": "source.hobbes",
+        "path": "./syntaxes/hobbes.tmLanguage.json"
+      }
+    ]
+  }
+}

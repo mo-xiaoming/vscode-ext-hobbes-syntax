@@ -1,0 +1,130 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Hobbes",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#control-keywords"
+		},
+		{
+			"include": "#ops-keywords"
+		},
+		{
+			"include": "#ops-symbols"
+		},
+		{
+			"include": "#parens"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#bool-values"
+		},
+		{
+			"include": "#regex-strings"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#block-comments"
+		},
+		{
+			"include": "#line-comments"
+		}
+	],
+	"repository": {
+		"parens": {
+			"patterns": [
+				{
+					"match": "\\(|\\)|\\[|\\]"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.other.hobbes",
+					"match": "\\b(option|module|import|where|exists|data|type|class|instance|pack|unpack|_)\\b"
+				}
+			]
+		},
+		"ops-keywords": {
+			"patterns": [
+				{
+					"name": "keyword.operator.new.hobbes",
+					"match": "\\b(and|or)\\b"
+				}
+			]
+		},
+		"ops-symbols": {
+			"patterns": [
+				{
+					"name": "keyword.operator.new.hobbes",
+					"match": "\\s(===|==|=>|=|->|<-|!=|>=|>|<=|<|~|@|::|\\|)\\s"
+				}
+			]
+		},
+		"control-keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.hobbes",
+					"match": "\\b(if|then|else|while|for|return|case|of|let|in|match|matches|with|do|return)\\b"
+				}
+			]
+		},
+		"bool-values": {
+			"patterns": [
+				{
+					"name": "constant.language.hobbes",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type.hobbes",
+					"match": "\\b(bool|byte|char|short|int|long|int128|float|double|time|datetime|timespan)\\b"
+				}
+			]
+		},
+		"regex-strings": {
+			"name": "string.regexp.hobbes",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hobbes",
+					"match": "\\\\."
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.hobbes",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hobbes",
+					"match": "\\\\."
+				}
+			]
+		},
+		"block-comments": {
+			"name": "comment.block.hobbes",
+			"begin": "/\\*",
+			"end": "\\*/"
+		},
+		"line-comments": {
+			"name": "comment.line.double-slash.hobbes",
+			"begin": "//(.*)$",
+			"end": "(?=$)",
+			"contentName": "comment.line.double-slash.hobbes"
+		}
+	},
+	"scopeName": "source.hobbes"
+}
